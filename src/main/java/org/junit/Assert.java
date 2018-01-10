@@ -1022,4 +1022,8 @@ public class Assert {
                 formatClass(expectedThrowable));
         throw new AssertionError(message);
     }
+    
+    public static void assertGreaterThan(double a, double b){
+        assertTrue("Not Greater than!",a > b);
+    }
 }
