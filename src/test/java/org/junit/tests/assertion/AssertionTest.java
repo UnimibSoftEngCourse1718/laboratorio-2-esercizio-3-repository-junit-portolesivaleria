@@ -14,6 +14,7 @@ import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.expectThrows;
 import static org.junit.Assert.fail;
+import static org.junit.Assert.assertGreaterThan;
 
 import java.io.IOException;
 import java.math.BigDecimal;
@@ -974,6 +975,19 @@ public class AssertionTest {
                 throw t;
             }
         };
+    }
+    
+    @Test
+    public void greaterThan() {     
+        char o1  = 'c';
+        char o2  = 'b';
+        int o3  = 6;
+        int o4  = 5;
+        double o5 = 10.5;
+        double o6 = 10.4;
+        assertGreaterThan(o1, o2);
+        assertGreaterThan(o3, o4);
+        assertGreaterThan(o5, o6);
     }
 }
 =======
